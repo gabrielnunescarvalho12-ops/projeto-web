@@ -183,86 +183,112 @@ function alternarMenu(){
 
 botaoMenu.addEventListener("click", alternarMenu) 
 
-// aula 4 formulario 
+//aula 4 formulario 
+// 
+// const formulario = document.querySelector("#from-contato" );
+// const campoNome = document.querySelector("#nome"); 
+// const campoEmail = document.querySelector("#email"); 
+// const campoAssunto = document.querySelector("#assunto"); 
+// const campoMensagem = document.querySelector("#mensagem"); 
+// const aviso = document.querySelector("#aviso") 
+// 
+// function validarNome(nome) {
+    // if(nome === ""){
+        // return "digite seu nome"
+    // } else if (nome.length < 3){
+        // return "o nome precisa ter pelo menos 3 letras."
+    // }else{
+        // return"";
+    // }
+// }
+// 
+// function validarEmail(email) {
+    // if (email === "") {
+        // return "digite o seu e-mail"
+    // }else if (email.icludes ("@") === false) {
+        // return "o e-mail precisa ter @"
+    // }else if (email.includes (".") === false){
+        // return "O e-mail precisa ter um ponto, como em.com."; 
+    // }else{
+        // return ""; 
+    // }
+// }
+// 
+// function validarAssunto(assunto) {
+    // if(assunto === "") {
+        // return "Escolha um assunto."; 
+    // }else{
+        // return "";
+    // }
+// }
+// 
+// function valitarMensagem(mensagem){
+    // if(mensagem === "") {
+        // return "Escreva uma mensagem."; 
+    // }else if(mensagem.length < 10){
+        // return "A mensagem precisa ter pelo menos 10 letras."; 
+    // }else{
+        // return ""; 
+    // }
+// }
+// 
+// function mostrarAviso(texto, tipo) {
+    // aviso.textContent = texto;
+    // aviso.classList.remove("erro");
+    // aviso.classList.remove("certo");
+    // aviso.classList.add(tipo);
+// }
+// 
+//  function enviarMensagem(evento) {
+    // evento.preventDefault()
+// 
+    // const nome = campo_nome.value.trim();
+    // const email = campo_email.value.trim();
+    // const assunto = campo_assunto.value.trim();
+    // const mensagem = campo_mensagem.value.trim();
+// 
+    // const erro_nome = validarNome(nome)
+    // const erro_email = validarEmail(email)
+    // const erro_assunto = validarAssunto(assunto)
+    // const erro_mensagem = validarMensagem(mensagem)
+// 
+    // if (erro_nome !== "") {
+    //   mostrarAviso(erro_nome, "erro")
+    // } else if (erro_email !== "") {
+    //   mostrarAviso(erro_email, "erro")
+    // } else if (erro_assunto !== "") {
+    //   mostrarAviso(erro_assunto, "erro")
+    // } else if (erro_mensagem !== "") {
+    //   mostrarAviso(erro_mensagem, "erro")
+    // } else {
+    //   mostrarAviso(`Mensagem Enviada! Valeu ${nome}.`, "certo")
+    // }
+//   }
+// 
+//   formulario.addEventListener("submit", enviarMensagem)
+// 
+   /*aula 4 - arreay */                            
+   
+const turma = ["Ana", "Bruno", "Carla", "Diego"]
 
-const formulario = document.querySelector("#from-contato" );
-const campoNome = document.querySelector("#nome"); 
-const campoEmail = document.querySelector("#email"); 
-const campoAssunto = document.querySelector("#assunto"); 
-const campoMensagem = document.querySelector("#mensagem"); 
-const aviso = document.querySelector("#aviso") 
+console.log(turma)                                
+console.log(turma[4])                             
+turma.push("Miguel")                              
+console.log(turma) 
 
-function validarNome(nome) {
-    if(nome === ""){
-        return "digite seu nome"
-    } else if (nome.length < 3){
-        return "o nome precisa ter pelo menos 3 letras."
-    }else{
-        return"";
+for (const aluno of turma) {
+    console.log(`bem-vindo, ${aluno}!`) 
+}
+    
+const skillsFront = ["HTML e CSS", "JavaScript", "React"]
+
+function monstrarLista (seletor, itens) {
+    let html = "" 
+    
+    for ( const item of itens) {
+        html = html + `<li> ${itens}</li>`
     }
+    document.querySelector(seletor).innerHTML = html; 
 }
 
-function validarEmail(email) {
-    if (email === "") {
-        return "digite o seu e-mail"
-    }else if (email.icludes ("@") === false) {
-        return "o e-mail precisa ter @"
-    }else if (email.includes (".") === false){
-        return "O e-mail precisa ter um ponto, como em.com."; 
-    }else{
-        return ""; 
-    }
-}
 
-function validarAssunto(assunto) {
-    if(assunto === "") {
-        return "Escolha um assunto."; 
-    }else{
-        return "";
-    }
-}
-
-function valitarMensagem(mensagem){
-    if(mensagem === "") {
-        return "Escreva uma mensagem."; 
-    }else if(mensagem.length < 10){
-        return "A mensagem precisa ter pelo menos 10 letras."; 
-    }else{
-        return ""; 
-    }
-}
-
-function mostrarAviso(texto, tipo) {
-    aviso.textContent = texto;
-    aviso.classList.remove("erro");
-    aviso.classList.remove("certo");
-    aviso.classList.add(tipo);
-}
-
- function enviarMensagem(evento) {
-    evento.preventDefault()
-
-    const nome = campo_nome.value.trim();
-    const email = campo_email.value.trim();
-    const assunto = campo_assunto.value.trim();
-    const mensagem = campo_mensagem.value.trim();
-
-    const erro_nome = validarNome(nome)
-    const erro_email = validarEmail(email)
-    const erro_assunto = validarAssunto(assunto)
-    const erro_mensagem = validarMensagem(mensagem)
-
-    if (erro_nome !== "") {
-      mostrarAviso(erro_nome, "erro")
-    } else if (erro_email !== "") {
-      mostrarAviso(erro_email, "erro")
-    } else if (erro_assunto !== "") {
-      mostrarAviso(erro_assunto, "erro")
-    } else if (erro_mensagem !== "") {
-      mostrarAviso(erro_mensagem, "erro")
-    } else {
-      mostrarAviso(`Mensagem Enviada! Valeu ${nome}.`, "certo")
-    }
-  }
-
-  formulario.addEventListener("submit", enviarMensagem)
