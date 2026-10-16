@@ -9,6 +9,10 @@
   --destaque: #fb923c;
   --raio: 16px;
   --sombra: 0 8px 24px rgba(109, 40, 217, 0.12);
+  --erro: #b91c1c;
+  --erro-fundo: #fef2f2;
+  --certo-fundo: #f0fdf4;
+  --certo: #15803d;
 }
 
 * {
@@ -221,8 +225,7 @@ html.modo-escuro {
   --texto-suave: #b8b3d6;
   --primaria: #c4b5fd;
   --primaria-escura: #a78bfa;
-  --certo-fundo: #e91919; 
-  --erro: #0968e4; 
+
 }
 
 /* Estas partes usam cores fixas no CSS original,
@@ -259,11 +262,23 @@ body {
   color: var(--texto);
   cursor: pointer;
 }
+.aviso {
+  min-height: 1.6em;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
 
-.aviso.certo{
+.aviso.erro {
   padding: 0.75rem 1rem;
-  background: var(--certo-funto);
+  background: var(--erro-fundo);
   color: var(--erro);
+}
+
+.aviso.certo {
+  padding: 0.75rem 1rem;
+  background: var(--certo-fundo);
+  color: var(--certo);
 }
 
 /* Deixa o menu aberto por cima do conteúdo da página */
