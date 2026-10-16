@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel contato</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="topo">
+        <a class="logo" href="#inicio">retornar</a>
+        <nav>
+            <a href="index.html#sobre">sobre</a>
+            <a href="index.html#skills">skills</a>
+             <a href="index.html#projetos">projeto</a>
+             <a href="contato.html">contatos</a>
+             <button class="botao-tema" title="alterar para o modo escuro" aria-label="altera modo escuro">🌙</button>
+        </nav>
+             <button class="botao-menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </header>
+    
+    <main class="container contato-pagina">
+        <h1>Vamos conversar</h1>
+        <p>Conte um pouco do seu projeto. Tudos os campos sao abrigatorios</p>
+
+            <form class="formulario" id="form.contato" novalidate> 
+
+                <div class="campo">
+                    <label for="Nome">Nome</label>
+                    <input type="text" id="nome" nome="nome" placeholder="digite seu nome"/>
+
+                    <div class="campo">
+                        <label for="email">e-mail</label>
+                        <input type="email" id="email" nome="email" placeholder="exempl@gmail.com" />
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">assunto</label>
+                        <select id="assunto" nome="assunto">
+                            <option value="">escolha o assunto</option>
+                            <option value="projeto">quero contratar o projeto</option>
+                            <option value="duvida">tenho uma duvida</option>
+                            <option value="outro">outro assunto</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">mensagem</label>
+                        <textarea id="mensagem" nome="mendagem" role="5" placeholder="digie sua mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="botao">enviar mensagem</button>
+                </div>
+                <p class="aviso" id="aviso" aria-live="polite"></p>
+            </form>
+    </main>
+
+    <footer class="rodape">
+        <h5>desenvolvido por Gabriel Nunes</h5>
+        <p>desenvolvido por html</p>
+    </footer>
+
+</body>
+</html>
