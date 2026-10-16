@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <insert class="topo">
+    <header class="topo">
         <a class="logo" href="#inicio">retornar</a>
         <nav>
             <a href="#sobre">sobre</a>
             <a href="#skills">skills</a>
              <a href="#projetos">projeto</a>
-             <a href="#contatos">contatos</a>
- 
+             <a href="contato.html">contatos</a>
+             <button class="botao-tema" title="alterar para o modo escuro" aria-label="altera modo escuro">🌙</button>
         </nav>
-    </insert>
+             <button class="botao-menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </header>
     <main>
         <section id="inicio" class="container hero">
             <div class="hero-texto"> 
@@ -29,7 +30,7 @@
             </div>
             <img class="foto" src="imagem.webp" alt="Texto alternativo">
         </section>
-        <section id="sobre" class="container">
+        <section id="sobre" class="container sobre">
             <h2>sobre mim</h2>
             <p>sou inteligente, esforcado, esperto, sei sobre programação
              um pouco, tenho interesse na area e pretendo trabalhar como 
@@ -92,12 +93,16 @@
 <section id="contato" class="container">
     <h2>contato</h2>
     <p>entre em contado para saber melhor sobre</p>
-    <a href="contado" class="botao">gabriel@contado.com</a>
+    <a class="botao" href="contato.html">enviar mensagem</a>
 </section> 
 <footer class="rodape">
     <h5>desenvolvido por Gabriel Nunes</h5>
     <p>desenvolvido por html</p>
 </footer>
     </main>
+    
+    <script src="script.js"></script>
+
 </body>
+
 </html>
